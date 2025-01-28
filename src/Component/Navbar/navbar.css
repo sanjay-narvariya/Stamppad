@@ -1,0 +1,77 @@
+.navbarTop{
+    padding: 5px ;
+    background-color:black;
+    box-shadow: 0px 4px 4px 0px lightgray;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+
+.navSec1{
+    display: flex;
+    align-items: center;
+}
+
+.brand{
+    background:transparent;
+}
+.navSec1 a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.mainNav{
+    position:absolute;
+    z-index:9999 ;
+    width:100%; 
+    height: 80px;
+    border-bottom: solid black 0.1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    }
+.mainNav a{
+    color:rgb(255, 255, 255);
+}
+
+
+.nav-item .nav-link:hover{
+   border-bottom: 2px solid red;
+   /* transition: 0.7s; */
+   max-width: fit-content;
+   margin: 0;
+   padding-bottom: 0;
+   color: rgb(255, 255, 255);
+}
+
+.droplist{
+    background:rgba(95, 95, 95, 0.37);
+    
+    color:rgb(255, 255, 255);
+}
+
+/* .nav-item .nav-link::after {
+    content:'';
+    left:0;
+    bottom:-3px;
+    width:0;
+    height:2px;
+    background-color:red;
+    transition:width 0.3s ease;
+}
+
+.nav-item .nav-link:hover::after{
+    width: 20px;
+}
+ */
+
+
+
+
+@media only screen and (max-width:768px) {
+    .navbarTop{
+        display: none;
+    }
+    .mainNav{
+        height: auto;
+    }
+}

@@ -1,0 +1,142 @@
+.item1 {
+  background: aliceblue;
+  text-align: center;
+  padding: 60px;
+}
+
+.aboutimg {
+  position: relative;
+}
+
+.banner2 img {
+  width: 70%;
+  height: auto;
+}
+
+.banner2 {
+  text-align: end;
+
+}
+
+
+.banner1 img {
+  top: 45%;
+  width: 55%;
+  height: auto;
+  position: absolute;
+}
+
+.item1:hover {
+  background: red;
+  border-radius: 10px;
+
+}
+
+.item1:hover {
+  cursor: pointer;
+
+}
+
+.section2 {
+  border: aliceblue;
+
+}
+
+
+.best-quality {
+  margin: 40px;
+  background: aliceblue;
+
+
+}
+
+.contact-box1 {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  background: rgba(247, 242, 231, 0.9);
+  padding: 20px 30px;
+  text-align: center;
+  color: #e265a4;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(32, 142, 252, 0.2);
+}
+
+.text-start {
+  text-align: center ! important;
+}
+
+.contact-box1 p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.contact-box1 h2 {
+  margin: 10px 0 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.contact-box1 {
+  animation: zoom-in-zoom-out 3.2s ease-in-out infinite;
+}
+
+
+.about-sec {
+  margin: 2rem;
+}
+
+
+@media only screen and(min-width:0) and (max-width:576px) {
+  .banner1 {
+    border-radius: 20px;
+  }
+
+  .sec3 p {
+    display: none;
+  }
+
+
+}
+
+@media only screen and (max-width:768px) {
+  .item1 {
+    margin-bottom: 1rem;
+  }
+
+  .about-sec {
+    margin: 1rem;
+  }
+
+.info-column{
+  width: 100%;
+  height: 100%;
+}
+
+}
+
+@media only screen and(min-width:769px) and (max-width:992px) {}
+
+@media only screen and(min-width:993) and (max-width:1200px) {
+  .card-title {
+    height: 50px;
+  }
+
+  .card-text {
+    height: 80px;
+  }
+
+}
+
+@media only screen and(min-width:1201) and (max-width:1919) {
+  .card-title {
+    height: 100px;
+  }
+
+  .card-text {
+    height: 180px;
+  }
+
+}

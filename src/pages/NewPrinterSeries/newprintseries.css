@@ -1,0 +1,333 @@
+ /* Card Styles */
+ .stamp-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.topBar{
+  padding-top: 100px;
+}
+
+.stamp-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.text1{
+  padding:50px;
+}
+
+.midStamp img{
+  height: 181px;
+  padding-left: 52px;
+  
+}
+
+.stamp-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.card-body {
+  background-color: #fff;
+  height: 268px;
+  border-radius: 0 0 12px 12px;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+ul li strong {
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .stamp-card {
+    margin-bottom: 20px;
+  }
+
+  .stamp-img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-center {
+    font-size: 2rem;
+  }
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  ul li {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS in App.css
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.oldStamp{
+  background:lightslategray;
+  padding-top:100px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(33.333% - 20px);
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  height: 350px;
+  object-fit: fill;
+
+  object-fit: cover;
+}
+
+.product h3 {
+  margin: 15px 0 10px;
+  font-size: 1.2em;
+}
+
+.product p {
+  color: #555;
+  font-size: 0.9em;
+  margin: 0 10px 15px;
+}
+
+.product button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+.product button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .product {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .product {
+    width: 100%;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS in App.css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  .newStemp{
+    padding-top: 100px;
+    background: lightslategray;
+}
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .product {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .product:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product img {
+    width: 100%;
+    height: 350px;
+    object-fit: fill;
+   
+  }
+  
+  .product h3 {
+    margin: 15px 0 10px;
+    font-size: 1.2em;
+  }
+  
+  .product p {
+    color: #555;
+    font-size: 0.9em;
+    margin: 0 10px 15px;
+  }
+  
+  .product button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 1em;
+  }
+  
+  .product button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .product {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product {
+      width: 100%;
+    }
+  }
+   */
