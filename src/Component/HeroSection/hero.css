@@ -1,46 +1,91 @@
-/* General Styling */
-.carousel-item img {
-  height: 90vh;
+.animate-image{
+  animation: zoom-in-zoom-out 5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+ .hero-sli h1, .hero-sli p{
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px ;
+  width: 0;
+  animation: typing 2s steps(20) forwards;
+}
+
+.hero-sli img {
   width: 100%;
+  height: 700px;
+ object-fit: cover;
 }
 
-.herocarousel {
+/* 
+.hero-sli h1, p{
+  animation: fade-in-text 1s ease-in-out forwards; 
+} */
+
+/* General styling for the slider */
+.hero-sli {
   position: relative;
 }
 
-/* Overlay Styling */
-.hero-slider-sec .carousel-item {
-  position: relative;
+.hero-slider-sec{
+  overflow: hidden;
 }
 
-.hero-slider-sec .carousel-item .overlay {
+/* Full screen overlay with smooth transition */
+.hero-sli .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay with transparency */
   display: flex;
+  color: white;
   justify-content: center;
   align-items: center;
+  transition: background 0.5s ease-in-out; /* Smooth transition */
 }
 
+/* Hero carousel image settings */
+.hero-slider-sec .carousel-item img {
+  height: 400px !important;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(70%); /* Darken image for better text readability */
+  animation: fade-in-text 1s ease-in-out forwards;
+}
+
+/* Text animation settings for carousel content */
 .hero-slider-sec .carousel-item .carousel-content {
   color: white;
   text-align: center;
-  z-index: 2;
   max-width: 80%;
-  animation: fade-in-text 1s ease-in-out forwards;
+  z-index: 2;
   opacity: 0;
+  animation: fade-in-text 1s ease-in-out forwards;
 }
 
+/* Heading and Paragraph styling */
 .hero-slider-sec .carousel-item .carousel-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: bold;
-  animation: slide-in-top 2s ease-in-out forwards;
+  animation: zoom-in-zoom-out 5s ease-in-out infinite;
+}
 
+.carousel-content h1 , p{
+  position: relative;
+  z-index: 999;
+  display: flex;
+}
+
+
+.hero-slider-sec img{
+  animation: zoom-in-zoom-out 5s ease-in-out infinite;
 }
 
 .hero-slider-sec .carousel-item .carousel-content p {
@@ -49,11 +94,9 @@
   animation: fade-in-text 1.5s ease-in-out forwards;
 }
 
-/* Zoom-in Animation for Images */
+/* Add zoom-in effect to the images */
 .hero-slider-sec .carousel-item img {
-  position: relative;
-  z-index: 0;
-  animation: zoom-in-zoom-out 6s ease-in-out infinite;
+  animation: zoom-in-zoom-out 5s ease-in-out infinite;
 }
 
 /* Keyframes for Animations */
@@ -83,20 +126,25 @@
   }
 }
 
-@keyframes slide-in-top {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
+/* Responsive Styling */
+@media (max-width: 768px) {
+  /* Adjust font sizes for mobile */
+  .hero-slider-sec .carousel-item .carousel-content h1 {
+    font-size: 2.5rem;
   }
 
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  .hero-slider-sec .carousel-item .carousel-content p {
+    font-size: 1.2rem;
+  }
+
+  /* Adjust image height for smaller screens */
+  .carousel-item img {
+    height: 70vh;
   }
 }
 
-/* Responsive Styling */
 @media (max-width: 576px) {
+  /* Further adjust font sizes for very small screens */
   .hero-slider-sec .carousel-item .carousel-content h1 {
     font-size: 2rem;
   }
@@ -104,14 +152,9 @@
   .hero-slider-sec .carousel-item .carousel-content p {
     font-size: 1rem;
   }
-}
 
-@media only screen and (max-width: 768px) {
-  .hero-slider-sec .carousel-item .carousel-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-slider-sec .carousel-item .carousel-content p {
-    font-size: 1.2rem;
+  /* Adjust image height for very small screens */
+  .carousel-item img {
+    height: 60vh;
   }
 }

@@ -10,6 +10,9 @@ import NewPrinterSeries from './NewPrinterSeries/NewPrinterSeries';
 import StampPads from './StampPads/StampPads';
 import AboutUs from '../Component/AboutUs/AboutUs';
 import Inks from './Inks/Inks';
+import Contactus from './ContactUs/Contactus';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function App() {
   return (
@@ -24,6 +27,7 @@ export default function App() {
           <Route path="/newprinterseries" element={<NewPrinterSeries />} />
           <Route path="/stamppads" element={<StampPads />} />
           <Route path="/inks" element={<Inks/>} />
+          <Route path="/contactus" element={<Contactus/>} />
         </Routes>
       {/* </div> */}
       <Footer />

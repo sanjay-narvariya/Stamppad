@@ -19,7 +19,7 @@ export default function Navbar() {
                                     <i className="bi bi-envelope text-danger" aria-hidden="true"></i>
                                     <span className="ms-2">Email:<Link to="mailto:ddplastic234@gmail.com" className="text-white">ddplastic1234@gmail.com</Link></span>
                                 </span>
-                            </div>1
+                            </div>
                         </div>
 
                         {/* Phone and Social Icons Section */}

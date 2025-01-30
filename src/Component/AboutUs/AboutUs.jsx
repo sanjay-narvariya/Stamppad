@@ -98,54 +98,28 @@ const AboutUs = () => {
                             </div>
 
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-6 ">
                             <h3 className='text-start section2'><b>ABOUT US</b> </h3>
-                            <h2 class='p-5 fon'>Produce Your own clean save the environment</h2>
+                            <h2 className='p-5 fon'>Produce Your own clean save the environment</h2>
                             <p>For More than 26 years,DD Plastic, founded in 1997 by our Director Mr. Naveen Semwal, has provided the community with high-quality products and dependable customer service. Because of our committed staff, we have grown into a reputable company that has aged gracefully and gained the trust of our client. We have created a unique administrative system with a capable management system to efficiently and punctually handle each process.</p>
-                            
-                               <div className="d-flex ">
 
-                               <div className="d-flex p-3 best-quality">
-                                    <img src="./images/best_quality.webp" alt="" height={50} />
-                                    <span> <h4> Best Quality</h4></span>
+                            <div className="about-flex">
+
+                                <div className=" best-quality">
+                                    <img src="./images/best_quality.webp" alt="" />
+                                     <h4> Best Quality</h4>
                                 </div>
-                                <div className="d-flex p-3 best-quality ">
-                                    <img src="./images/best_quality.webp " alt="" height={50} />
-                                    <h4>Warrenty </h4>
-                                </div>
-
-
-                               </div>
-                            
-                        </div>
-
-                        {/* 
-                        <div className="col-md-6">
-
-                        </div>
-                        <div className="col-md-6">
-                            <div className="row">
-                                <div className="col-md-6">
-                                    <div className="d-flex p-3 best-quality">
-                                        <img src="./images/best_quality.webp " alt="" height={50} />
-                                        <h4> Best Quality</h4>
-                                    </div>
-                                    <button className='bg-secondary p-3 b-3'><b>Know More</b></button>
-
-                                </div>
-                                <div className="col-md-6 ">
-                                    <div className="d-flex p-3 best-quality ">
-                                        <img src="./images/best_quality.webp " alt="" height={50} />
-                                        <h4>Warrenty </h4>
-                                    </div>
-
-
+                                <div className=" best-quality ">
+                                    <img src="./images/best_quality.webp " alt="" />
+                                    <h4>Warrenty</h4>
                                 </div>
 
 
                             </div>
 
-                        </div> */}
+                        </div>
+
+
 
 
 

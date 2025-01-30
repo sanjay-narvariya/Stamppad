@@ -6,7 +6,6 @@
     font-weight: 100;
 }
 
-
 .navSec1{
     display: flex;
     align-items: center;
@@ -19,6 +18,7 @@
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 600;
+    
 }
 
 .mainNav{
@@ -30,7 +30,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     }
 .mainNav a{
-    color:rgb(255, 255, 255);
+    color:rgb(255, 255, 255) !important;
 }
 
 
@@ -64,7 +64,9 @@
 }
  */
 
-
+ .navbar-toggler{
+    background-color: white !important;
+ }
 
 
 @media only screen and (max-width:768px) {

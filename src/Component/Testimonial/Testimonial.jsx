@@ -105,7 +105,7 @@ const Testimonial = () => {
                                         />
                                         <h5 className="card-title">{testimonial.title}</h5>
                                         <p className="card-text">{testimonial.text}</p>
-                                        <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half text-warning"></i>
+                                        <i className="bi bi-star-fill text-warning"></i><i className="bi bi-star-fill text-warning"></i><i className="bi bi-star-fill text-warning"></i><i className="bi bi-star-fill text-warning"></i><i className="bi bi-star-half text-warning"></i>
 
                                     </div>
                                 </div>

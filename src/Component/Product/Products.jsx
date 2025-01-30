@@ -8,62 +8,61 @@ import pic3 from "../../images/product3.webp"
 const products = [
   {
     id: 1,
-    name: "Product series 1",
+    name: "Old products",
     image: "/images/products/o1.jpg", 
   },
   {
     id: 2,
-    name: "Product series 2",
-    description: "(CAT5e Indoor, CAT5e Outdoor)",
+    name: "All New Printer Series",
     image: "/images/products/n1.jpg",
   },
   {
     id: 3,
-    name: "Transparent Speaker Cables",
-    image: "/images/products/n2.png",
+    name: "Stamp Pad",
+    image: "/images/products/sp1.jpg",
   },
   {
     id: 4,
-    name: "Jelly Filled Co-axial Cables",
-    image: "/images/products/b1.png",
+    name: "INKS",
+    image: "/images/products/i1.jpg",
   },
-  {
-    id: 5,
-    name: "Twin Twisted Silk Wires",
-    image: "/images/products/n3.png",
-  },
-  {
-    id: 6,
-    name: "Telecommunication Cables",
-    image: "/images/products/o6.jpg",
-  },
-  {
-    id: 7,
-    name: "CCTV Cables",
-    image: "/images/products/o7.jpg",
-  },
-  {
-    id: 8,
-    name: "Single & Multi-core Flexible Cables",
-    image: "/images/products/o8.png",
-  },
+  // {
+  //   id: 5,
+  //   name: "Twin Twisted Silk Wires",
+  //   image: "/images/products/n3.png",
+  // },
+  // {
+  //   id: 6,
+  //   name: "Telecommunication Cables",
+  //   image: "/images/products/o6.jpg",
+  // },
+  // {
+  //   id: 7,
+  //   name: "CCTV Cables",
+  //   image: "/images/products/o7.jpg",
+  // },
+  // {
+  //   id: 8,
+  //   name: "Single & Multi-core Flexible Cables",
+  //   image: "/images/products/o8.png",
+  // },
 ];
 
 const carouselItems = [
   {
     id: 1,
     title: "Transparent Speaker Cables",
-    image: pic1, // Replace with the correct image path
+    image: pic1, 
   },
   {
     id: 2,
     title: "Jelly Filled Co-axial Cables",
-    image: pic2, // Replace with the correct image path
+    image: pic2, 
   },
   {
     id: 3,
     title: "CCTV Cables",
-    image: pic3, // Replace with the correct image path
+    image: pic3, 
   },
 ];
 
@@ -88,7 +87,7 @@ const Products = () => {
       <section className="product-section">
         <div className="container">
           <div className="row">
-            <div className="products-section p-5 col-md-12">
+            <div className="products-section  col-md-12">
               <h2>
                 <b>OUR CATEGORIES</b>
               </h2>
@@ -110,7 +109,8 @@ const Products = () => {
                   </div>
                 ))}
               </div>
-              <button className="view-more-button">VIEW MORE</button>
+           
+
             </div>
           </div>
         </div>
