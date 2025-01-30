@@ -56,6 +56,9 @@ const AboutUs = () => {
 
             </div> */}
 
+
+            
+
             <section className='about-sec'>
                 <div className="container sec2">
                     <div className="row">
@@ -161,4 +164,4 @@ const AboutUs = () => {
     )
 }
 
-export default AboutUs
+export default AboutUs;

@@ -68,7 +68,7 @@ export default function Navbar() {
                     <Link className="nav-link  " aria-current="page" to="/">Home</Link>
                 </li>
                 <li className="nav-item me-3">
-                    <Link className="nav-link" to="/aboutus">About Us</Link>
+                    <Link className="nav-link" to="/about-us">About Us</Link>
                 </li>
                 <li className="nav-item dropdown me-3">
                     <Link

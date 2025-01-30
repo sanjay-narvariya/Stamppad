@@ -8,11 +8,13 @@ import "slick-carousel/slick/slick-theme.css";
 import OldPrinterSeries from './OldPrinterSeries/OldPrinterSeries';
 import NewPrinterSeries from './NewPrinterSeries/NewPrinterSeries';
 import StampPads from './StampPads/StampPads';
-import AboutUs from '../Component/AboutUs/AboutUs';
+import AboutUs from './AboutUs/AboutUs';
 import Inks from './Inks/Inks';
 import Contactus from './ContactUs/Contactus';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import '../App.css'
+import AboutPage from "../pages/AboutUs/AboutUs"
 
 export default function App() {
   return (
@@ -22,12 +24,12 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/oldprinterseries" element={<OldPrinterSeries />} />
-          <Route path="/newprinterseries" element={<NewPrinterSeries />} />
+          <Route path="/oldprinterseries" element={<OldPrinterSeries/>} />
+          <Route path="/newprinterseries" element={<NewPrinterSeries/>} />
           <Route path="/stamppads" element={<StampPads />} />
           <Route path="/inks" element={<Inks/>} />
           <Route path="/contactus" element={<Contactus/>} />
+          <Route path="/about-us" element={<AboutPage/>} />
         </Routes>
       {/* </div> */}
       <Footer />
