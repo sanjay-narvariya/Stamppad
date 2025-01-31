@@ -3,7 +3,7 @@ import HeroSection from '../../Component/HeroSection/HeroSection'
 import Products from '../../Component/Product/Products'
 import Testimonial from '../../Component/Testimonial/Testimonial'
 import AboutUs from '../../Component/AboutUs/AboutUs'
-import ContactUs from '../../Component/ContactUs/ContactUs'
+// import ContactUs from '../../Component/ContactUs/ContactUs'
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
      <HeroSection/>
       <AboutUs/> 
       <Products/>
-      <ContactUs/>
+      {/* <ContactUs/> */}
       <Testimonial/>
       </div>
 

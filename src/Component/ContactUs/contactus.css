@@ -1,3 +1,86 @@
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.contact-info {
+  width: 40%;
+  background: #e8f7ff;
+  margin-left: 40px;
+  padding: 60px;
+  border-radius: 10px;
+}
+
+.contact-info h2 {
+  color: #0a0a23;
+}
+
+.contact-form {
+  width: 55%;
+  padding: 20px;
+}
+
+.contact-form h2 {
+  color: #0a0a23;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group select {
+  width: 48%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.terms input {
+  margin-right: 10px;
+}
+
+.terms span {
+  color: #007bff;
+  cursor: pointer;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+
+
+
 
  /* Container for overall layout */
    .container1 {

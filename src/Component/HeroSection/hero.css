@@ -77,7 +77,7 @@
   animation: zoom-in-zoom-out 5s ease-in-out infinite;
 }
 
-.carousel-content h1 , p{
+.carousel-content h1 , .carousel-content p{
   position: relative;
   z-index: 999;
   display: flex;

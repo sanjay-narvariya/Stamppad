@@ -3,13 +3,15 @@ import "./inks.css"
 import pic1 from '../images/a1.jpg';
 import pic2 from '../images/a1.jpg';
 import pic3 from '../images/a1.jpg';
+import PageHeader from '../../Component/PageHeader/PageHeader';
 
 const Inks = () => {
   return (
     <>
+    <PageHeader topheading="Inks" title="inks"/>
 
 <div className="topBar" >
-      <h1 style={{textAlign:"center" }}>Our Inks products</h1>
+      <h1  style={{textAlign:"center" }}>Our Inks products</h1>
     </div>
       
       <div className="container">

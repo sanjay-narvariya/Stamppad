@@ -3,16 +3,19 @@ import "./newprintseries.css";
 import pic1 from '../images/a1.jpg';
 import pic2 from '../images/a1.jpg';
 import pic3 from '../images/a1.jpg';
+import PageHeader from "../../Component/PageHeader/PageHeader";
 
 
 const NewPrinterSeries = () => {
 
   return (
     <>
+    <PageHeader  topheading=" New Printer Series " title="newproducts" />
+
     <div className="topBar" >
       <h1 style={{textAlign:"center" }}>Our New products</h1>
     </div>
-      <div className="container  ">
+      <div className="container">
         <div className="row">
           <div className="col-md-2">
             <img src="/images/products/n1.jpg" height={270} width={210} alt="" />

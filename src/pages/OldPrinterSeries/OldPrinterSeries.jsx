@@ -3,12 +3,14 @@ import "./oldPrinterSeries.css";
 import pic1 from '../images/a1.jpg';
 import pic2 from '../images/a1.jpg';
 import pic3 from '../images/a1.jpg';
+import PageHeader from "../../Component/PageHeader/PageHeader";
 
 
 const OldPrinterSeries = () => {
 
   return (
-    <>
+    <> 
+    <PageHeader topheading="Old Priter Series" title="oldproduct" />
     <div className="topBar" >
       <h1 style={{textAlign:"center"}}>Our Old products</h1>
     </div>

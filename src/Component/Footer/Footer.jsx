@@ -29,13 +29,7 @@ const Footer = () => {
               Committed to quality, efficiency, and customer satisfaction. Your
               trusted choice for excellence.
             </p>
-            <p className="footer-contact">
-              📧 <a href="mailto:ddPalastic98@gmail.com">ddPalastic98@gmail.com</a>
-            </p>
-            <p className="footer-contact">
-              📍 I-245, Sector - 5, DSIIDC, Bawana Industrial Area, Delhi, India.
-              Pin Code - 110039
-            </p>
+
           </div>
 
           {/* Useful Links */}
@@ -57,7 +51,6 @@ const Footer = () => {
               <li><Link to="/products/new-stamp">New Stamp</Link></li>
               <li><Link to="/products/ink-stamp">Ink Stamp</Link></li>
               <li><Link to="/products/stamp-pads">Stamp Pads</Link></li>
-              <li><Link to="/products/all-stamps">All Stamps</Link></li>
             </ul>
           </div>
 
@@ -65,18 +58,27 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-subtitle">Social Media</h4>
             <div className="footer-social">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+
+              <p className="footer-contact">
+                <i class="bi bi-envelope-at-fill fs-3"> </i> <a href="mailto:ddPalastic98@gmail.com">ddPalastic98@gmail.com</a>
+              </p>
+              <p className="footer-contact">
+                <i class="bi bi-geo-alt-fill fs-4"></i>  I-245, Sector - 5, DSIIDC, Bawana Industrial Area, Delhi, India.
+                Pin Code - 110039
+              </p>
+                <p className="footer-contact "><i class="bi bi-telephone-fill fs-4"></i> Contact No :  7982167578</p>
+              {/* <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <i className="bi bi-facebook"></i>
               </a>
               <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <i className="bi bi-instagram"></i>
               </a>
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <a href="https://wa.me/7982167578" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                 <i className="bi bi-whatsapp"></i>
               </a>
               <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <i className="bi bi-twitter"></i>
-              </a>
+              </a> */}
             </div>
             <div className="footer-back-to-top">
               <button

@@ -17,7 +17,7 @@ export default function Navbar() {
                                 Pincode-110039</Link>
                                 <span className="text-white ms-4 d-flex align-items-center">
                                     <i className="bi bi-envelope text-danger" aria-hidden="true"></i>
-                                    <span className="ms-2">Email:<Link to="mailto:ddplastic234@gmail.com" className="text-white">ddplastic1234@gmail.com</Link></span>
+                                    <span className="ms-2">Email:<Link to="mailto:ddplastic@gmail.com" className="text-white">ddplastic@gmail.com</Link></span>
                                 </span>
                             </div>
                         </div>

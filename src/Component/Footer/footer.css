@@ -45,15 +45,20 @@
   margin: 15px 0;
 }
 
-.footer-contact {
+.footer-contact i {
   font-size: 15px;
   color: #ff8c00;
   margin: 5px 0;
+  
 }
-
+ .footer-contact {
+  grid-gap: 27px;
+  display:flex; 
+ }
 .footer-contact a {
   color: #ff8c00;
   text-decoration: none;
+  
 }
 
 .footer-contact a:hover {
@@ -88,7 +93,7 @@
 }
 
 .footer-social {
-  display: flex;
+  display: grid;
   justify-content: space-around;
   margin-top: 20px;
 }
@@ -117,6 +122,7 @@
   font-size: 30px;
   transition: transform 0.3s ease;
   border: none;
+  width:70px;
 }
 
 .back-to-top-button:hover {
