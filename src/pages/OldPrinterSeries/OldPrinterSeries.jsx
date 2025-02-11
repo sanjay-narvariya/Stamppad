@@ -11,28 +11,30 @@ const OldPrinterSeries = () => {
   return (
     <> 
     <PageHeader topheading="Old Priter Series" title="oldproduct" />
-    <div className="topBar" >
-      <h1 style={{textAlign:"center"}}>Our Old products</h1>
-    </div>
+   
       <div className="container">
         <div className="row  text-center">
-          <div className="col-md-2">
-            <img src="/images/products/o19.jpg" height={270} width={210} alt="" />
+          <div className="col-md-2"> 
+            <h3 className="pt-3">Products</h3>
+            <img src="/images/products/o19.jpg" className="productpic"  alt="" />
           </div>
           <div className="col-md-6">
+            <h3 className="pt-3 text-center">Stamps</h3>
             <div className="midStamp">
+
              <img src="/images/products/circular-stamp.png"   alt="" />
             </div>
           </div>
           <div className="col-md-4 ">
             <div className="container sec3">
-              <div className="card">
-                <div className="card-header bg-danger text-white">
+            <h3 className="pt-3">Details</h3>
+              <div className="card"> 
+                 <div className="card-header bg-danger text-white">
                   Printer C 10
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -42,7 +44,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -54,12 +56,12 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
-                        </div>
-                        <div>
+                         </div>
+                        <div className="colordetails">
                           
                           <span className="badge bg-dark me-1">Black</span>
                           <span className="badge bg-danger me-1">Red</span>
@@ -67,7 +69,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -79,7 +81,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -90,7 +92,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -126,7 +128,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -136,7 +138,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -148,12 +150,12 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
                         </div>
-                        <div>
+                        <div  className="colordetails">
                           
                           <span className="badge bg-dark me-1">Black</span>
                           <span className="badge bg-danger me-1">Red</span>
@@ -161,7 +163,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -174,7 +176,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -185,7 +187,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -222,7 +224,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -232,7 +234,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -244,7 +246,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -257,7 +259,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -270,7 +272,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -281,7 +283,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -319,7 +321,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -329,7 +331,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -341,7 +343,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -354,7 +356,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -367,7 +369,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -378,7 +380,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -414,7 +416,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -424,7 +426,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -436,7 +438,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -449,7 +451,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -462,7 +464,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -473,7 +475,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -510,7 +512,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -520,7 +522,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -532,7 +534,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -545,7 +547,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -558,7 +560,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -569,7 +571,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -608,7 +610,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -618,7 +620,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -630,7 +632,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -643,7 +645,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -656,7 +658,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -667,7 +669,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -705,7 +707,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -715,7 +717,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -727,7 +729,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -740,7 +742,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -753,7 +755,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -764,7 +766,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -803,7 +805,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -813,7 +815,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -825,7 +827,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -838,7 +840,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -851,7 +853,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -862,7 +864,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -901,7 +903,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -911,7 +913,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -923,7 +925,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -936,7 +938,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -949,7 +951,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -960,7 +962,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -998,7 +1000,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -1008,7 +1010,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -1020,7 +1022,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -1033,7 +1035,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -1046,7 +1048,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -1057,7 +1059,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -1096,7 +1098,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -1106,7 +1108,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -1118,7 +1120,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -1131,7 +1133,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -1144,7 +1146,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -1155,7 +1157,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -1196,7 +1198,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -1206,7 +1208,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -1218,7 +1220,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -1231,7 +1233,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -1244,7 +1246,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -1255,7 +1257,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -1297,7 +1299,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -1307,7 +1309,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -1319,7 +1321,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -1332,7 +1334,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -1345,7 +1347,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -1356,7 +1358,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -1398,7 +1400,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -1408,7 +1410,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -1420,7 +1422,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -1433,7 +1435,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -1446,7 +1448,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -1457,7 +1459,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -1498,7 +1500,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -1508,7 +1510,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -1520,7 +1522,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -1533,7 +1535,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -1546,7 +1548,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -1557,7 +1559,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -1597,7 +1599,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -1607,7 +1609,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -1619,7 +1621,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -1632,7 +1634,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -1645,7 +1647,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -1656,7 +1658,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -1696,7 +1698,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -1706,7 +1708,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -1718,7 +1720,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -1731,7 +1733,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -1744,7 +1746,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -1755,7 +1757,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -1793,7 +1795,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -1803,7 +1805,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -1815,7 +1817,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -1828,7 +1830,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -1841,7 +1843,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -1852,7 +1854,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -1892,7 +1894,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -1902,7 +1904,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -1914,7 +1916,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -1927,7 +1929,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -1940,7 +1942,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -1951,7 +1953,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -1992,7 +1994,7 @@ const OldPrinterSeries = () => {
                 </div>
                 <div className="card-body">
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -2002,7 +2004,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic1} height={40} alt="Packaging" />
@@ -2014,7 +2016,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -2027,7 +2029,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -2040,7 +2042,7 @@ const OldPrinterSeries = () => {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -2051,7 +2053,7 @@ const OldPrinterSeries = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                       <div className="d-flex align-items-center">
                         <div className="me-2">
                           <img src={pic3} height={40} alt="Optional Cover" />
@@ -2144,7 +2146,7 @@ export default OldPrinterSeries;
 //                 </div>
 //                 <div className="card-body">
 //                   <div className="row mb-3">
-//                     <div className="col-6">
+//                     <div className="col-12 col-md-6">
 //                       <div className="d-flex align-items-center">
 //                         <div className="me-2">
 //                           <img src={pic1} height={40} alt="Size of Imprint" />
@@ -2154,7 +2156,7 @@ export default OldPrinterSeries;
 //                         </div>
 //                       </div>
 //                     </div>
-//                     <div className="col-6">
+//                     <div className="col-12 col-md-6">
 //                       <div className="d-flex align-items-center">
 //                         <div className="me-2">
 //                           <img src={pic1} height={40} alt="Packaging" />
@@ -2166,7 +2168,7 @@ export default OldPrinterSeries;
 //                     </div>
 //                   </div>
 //                   <div className="row mb-3">
-//                     <div className="col-6">
+//                     <div className="col-12 col-md-6">
 //                       <div className="d-flex align-items-center">
 //                         <div className="me-2">
 //                           <img src={pic2} height={40} alt="Colour of Handle" />
@@ -2179,7 +2181,7 @@ export default OldPrinterSeries;
 //                         </div>
 //                       </div>
 //                     </div>
-//                     <div className="col-6">
+//                     <div className="col-12 col-md-6">
 //                       <div className="d-flex align-items-center">
 //                         <div className="me-2">
 //                           <img src={pic3} height={40} alt="Spare Pad" />
@@ -2192,7 +2194,7 @@ export default OldPrinterSeries;
 //                     </div>
 //                   </div>
 //                   <div className="row mb-3">
-//                     <div className="col-6">
+//                     <div className="col-12 col-md-6">
 //                       <div className="d-flex align-items-center">
 //                         <div className="me-2">
 //                           <img src={pic3} height={40} alt="Recommended Number of Lines" />
@@ -2203,7 +2205,7 @@ export default OldPrinterSeries;
 //                         </div>
 //                       </div>
 //                     </div>
-//                     <div className="col-6">
+//                     <div className="col-12 col-md-6">
 //                       <div className="d-flex align-items-center">
 //                         <div className="me-2">
 //                           <img src={pic3} height={40} alt="Optional Cover" />

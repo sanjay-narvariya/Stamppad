@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+// import { RingLoader } from "react-spinners";
 import './hero.css';
 
 const HeroSection = () => {
@@ -16,6 +17,17 @@ const HeroSection = () => {
     };
 
     return (
+        <>
+
+
+ {/* <div className="loader-overlay" id="loader">
+    <div className="loader-container">
+         <RingLoader /> 
+    </div>
+  </div> 
+         
+            */}
+
         <section className="hero-slider-sec">
             <Slider {...settings} className="herocarousel">
                 {/* Slide 1 */}
@@ -52,7 +64,12 @@ const HeroSection = () => {
                 </div>
             </Slider>
         </section>
+        </>
     );
 };
 
 export default HeroSection;
+
+
+
+

@@ -11,6 +11,11 @@
   margin: 0 auto;
   padding: 20px;
 } */
+.productpic{
+ height:270px;
+ width:210px;
+}
+
 .oldStamp{
   background:lightslategray;
   padding-top:100px;
@@ -66,6 +71,10 @@ h1 {
   margin: 0 10px 15px;
 }
 
+.colordetails{
+   display: flex;
+    font-size: smaller;
+}
 .product button {
   background-color: #007bff;
   color: #fff;
@@ -74,7 +83,7 @@ h1 {
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 15px;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .product button:hover {
@@ -84,6 +93,9 @@ h1 {
 @media (max-width: 768px) {
   .product {
     width: calc(50% - 20px);
+  }
+  .productpic{
+    width:90%;
   }
 }
 

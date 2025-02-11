@@ -63,7 +63,7 @@ textarea {
   cursor: pointer;
 }
 
-button {
+.button1 {
   width: 100%;
   padding: 10px;
   background: linear-gradient(to right, #ff758c, #ff7eb3);
@@ -76,6 +76,7 @@ button {
 
 button:hover {
   opacity: 0.9;
+  
 }
 
 
@@ -93,14 +94,6 @@ button:hover {
     overflow: hidden;
   } 
 
-  
-  /* Row for main content */
-  .row {
-    display: flex;
-    flex: 1;
-    width: 100%;
-    flex-wrap: wrap;
-  }
   
   /* Column styles */
   .column {
@@ -187,9 +180,9 @@ button:hover {
   }
   
   .feature-box {
-    background: #2a2a2a;
+    /* background: #2a2a2a; */
     color:white;
-    padding: 15px;
+    /* padding: 15px; */
     border-radius: 10px;
     width: 45%;
     text-align: center;
@@ -198,6 +191,7 @@ button:hover {
   }
   .feature-box :hover{
     background: brown;
+    border-radius: 20px;
     cursor: pointer;
   }
   
@@ -215,7 +209,6 @@ button:hover {
   }
 .sec3{
   padding-bottom: 65px;
-
 }
  
   
@@ -237,6 +230,14 @@ button:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  
+.sec3{
+  padding-bottom: 20px;
+}
+  .contact-form {
+     width: 100%; 
+    padding: 20px;
+}
 
   .info-column{
     height: 100%;
@@ -244,10 +245,6 @@ button:hover {
     margin-bottom: 1rem;
   }
   .container1 {
-    flex-direction: column;
-  }
-
-  .row {
     flex-direction: column;
   }
 
@@ -281,6 +278,26 @@ button:hover {
   .feature-box {
     width: 90%;
   }
+
+
+
+  .contact-info {
+    width:100%;
+    background: #e8f7ff;
+  margin:0;
+    border-radius: 10px;
+    padding:20px;
+   
+  }
+
+  .contact-container {
+    display:grid;
+  }
+      
+     
+
+
+
 }
   
 

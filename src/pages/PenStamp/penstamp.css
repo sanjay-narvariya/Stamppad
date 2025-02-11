@@ -1,0 +1,148 @@
+.poppins-black-italic {
+  font-family: "Playwrite IN", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Card Styles */
+.stamp-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topBar {
+  padding-top: 100px;
+}
+
+.stamp-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.text1 {
+  padding: 50px;
+}
+
+.midStamp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 65px;
+  text-align: center;
+}
+
+.midStamp img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 181px;
+
+}
+
+.stamp-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.card-body {
+  background-color: #fff;
+  height: 230px;
+  border-radius: 0 0 12px 12px;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+ul li strong {
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+
+.inkpic img {
+  height: 270px;
+  width: 210px;
+
+}
+
+/* .ink-image{
+      width: 210px;
+      height: 270px;
+    } */
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .stamp-card {
+    margin-bottom: 20px;
+  }
+
+  .stamp-img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-center {
+    font-size: 2rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  ul li {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .midStamp img {
+    height: auto;
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .ink-image {
+    height: auto;
+    width: 100%;
+  }
+
+  .card-body {
+    height: 100%;
+  }
+
+}

@@ -17,6 +17,15 @@
     padding:50px;
   }
   
+.midStamp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 65px;
+  text-align: center;
+}
+
+  
   .midStamp img{
     height: 181px;
     padding-left: 52px;

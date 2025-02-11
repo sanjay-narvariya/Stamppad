@@ -11,24 +11,21 @@ const StampPads = () => {
   return (
     <>
     <PageHeader topheading="Stamp Pads" title="stamppads" />
-
-
-
-    <div className="topBar" >
-      <h1 style={{textAlign:"center" }}>Our Stemp products</h1>
-    </div>
       <div className="container  ">
         <div className="row">
           <div className="col-md-2">
+          <h3 className="pt-3 text-center">Products</h3>
             <img src="/images/products/sp1.jpg" height={270} width={210} alt="" />
           </div>
           <div className="col-md-6">
             <div className="midStamp">
+            <h3 className="pt-3 text-center">Stamps</h3>
              <img src="/images/stamp.jpg"  alt="" />
             </div>
           </div>
           <div className="col-md-4">
             <div className="container">
+            <h3 className="pt-3 text-center">Details</h3>
               <div className="card">
                 <div className="card-header bg-danger text-white">
                   Printer C 10

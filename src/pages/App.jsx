@@ -15,6 +15,21 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../App.css'
 import AboutPage from "../pages/AboutUs/AboutUs"
+import PenStamp from './PenStamp/PenStamp';
+import FlashMachineries from './FlashStampMachine/Machineries/FlashMachineries';
+import EmbossingSeal from './EmbossingSeal/EmbossingSeal';
+import NumberingMachine from './AutomaticNumberingMachine/NumberingMachine';
+import SelfInkStamp from './SelfInkStamp/SelfInkStamp';
+import PreInkStamp from './PreInkStamp/PreInkStamp';
+import IsoCertification from './IsoCertification/IsoCertification';
+import SelfInkDaterStamp from './SelfInkDaterStamp/SelfInkDaterStamp';
+import PolymerStampMakingMachine from './PolymerStampMakingMachine/PolymerStampMakingMachine';
+import PolymerStampRawMaterials from './POLYMER STAMP RAW MATERIALS/PolymerStampRawMaterials';
+import FlashStampRawMaterial from './FLASH STAMP RAW MATERIALS/FlashStampRawMaterial';
+import FlashStampMachineAccessories from './Flash Stamp Machine Accessories/FlashStampMachineAccessories';
+
+
+
 
 export default function App() {
   return (
@@ -30,6 +45,19 @@ export default function App() {
           <Route path="/inks" element={<Inks/>} />
           <Route path="/contactus" element={<Contactus/>} />
           <Route path="/about-us" element={<AboutPage/>} />
+          <Route path="/penstamp" element={<PenStamp/>} />
+          <Route path="/flashmachineries" element={<FlashMachineries/>} />
+          <Route path="/embossingseal" element={<EmbossingSeal/>}/>
+          <Route path="/automaticnumbermachine" element={<NumberingMachine/>}/>
+          <Route path="/selfinkstamp" element={<SelfInkStamp/>}/>
+          <Route path="/preinkstamp" element={<PreInkStamp/>}/>
+          <Route path="/isocertification" element={<IsoCertification/>}/>
+          <Route path="/selfinkdaterstamp" element={<SelfInkDaterStamp/>}/>
+          <Route path="/polymerstampmakingmachine" element={<PolymerStampMakingMachine/>}/>
+          <Route path="/polymerstamprawmaterial" element={<PolymerStampRawMaterials/>}/>
+          <Route path="/flashstamprawmaterial"  element={<FlashStampRawMaterial/>}/>
+          <Route path="/flashstampmachineaccessories"  element={<FlashStampMachineAccessories/>}/>
+           
         </Routes>
       {/* </div> */}
       <Footer />

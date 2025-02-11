@@ -63,7 +63,7 @@
 .hero-slider-sec .carousel-item .carousel-content {
   color: white;
   text-align: center;
-  max-width: 80%;
+  max-width: 80%;     
   z-index: 2;
   opacity: 0;
   animation: fade-in-text 1s ease-in-out forwards;
@@ -127,7 +127,7 @@
 }
 
 /* Responsive Styling */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   /* Adjust font sizes for mobile */
   .hero-slider-sec .carousel-item .carousel-content h1 {
     font-size: 2.5rem;
@@ -140,6 +140,9 @@
   /* Adjust image height for smaller screens */
   .carousel-item img {
     height: 70vh;
+  }
+  .hero-sli img {
+    height: 100%;
   }
 }
 

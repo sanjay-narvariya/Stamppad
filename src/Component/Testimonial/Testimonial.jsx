@@ -57,41 +57,43 @@ const Testimonial = () => {
             },
         ],
     };
-
+ 
     const testimonials = [
         {
             id: 1,
-            title: "Sweety ",
+            title: "Mukesh Singh",
             text: "This is an amazing service! Highly recommended for anyone.",
-            image: "/images/products/review1.webp",
+            image: "/images/products/testimonial.JPG",
             link: "#",
         },
         {
             id: 2,
-            title: "jatin malik",
+            title: "Vishnu",
             text: "The quality of work exceeded my expectations. Fantastic!",
-            image: "/images/products/review2.webp",
+            image: "/images/products/testimonial1.jpg",
             link: "#",
         },
         {
             id: 3,
-            title: "Arun Singh",
+            title: "Gaurav Panchal",
             text: "The team was very supportive and responsive. 5 stars!",
-            image: "/images/products/review3.webp",
+            image: "/images/products/testimonial2.jpg",
             link: "#",
         },
         {
             id: 4,
-            title: "Rocky",
+            title: "Sagar",
             text: "I had an outstanding experience",
-            image: "/images/products/review4.webp",
+            image: "/images/products/testimonial4.jpg",
             link: "#",
         },
     ];
 
     return (
         <>
+
             <section className="testimonial-section">
+                  <h1 className="text-center">What Our Clients Say </h1>
                 <div className="container">
                     <div className="slider-container">
                         <Slider {...settings}>

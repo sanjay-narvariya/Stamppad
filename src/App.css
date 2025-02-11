@@ -4,3 +4,17 @@
 .all-sec-margin {
     margin-top: 5rem;
 }
+
+@media only screen and (max-width:768px) {
+    .all-sec-margin{
+        margin-top: 0;
+    }
+}
+
+/* .website-loader{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+} */

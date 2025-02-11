@@ -39,7 +39,7 @@ const ContactUs = () => {
                 <input type="checkbox" id="terms" />
                 <label htmlFor="terms"> I agree to the <span>Terms & Conditions</span> of Business Name.</label>
               </div>
-              <button type="submit">Submit</button>
+              <button className="button1" type="submit">Submit</button>
             </form>
           </div>
         </div>
@@ -84,7 +84,7 @@ const ContactUs = () => {
                 </div>
                 <div className="feature-box">
                   <h3>
-                    <i className="bi bi-hand-thumbs-up"></i>
+                    <i className="bi bi-hand-thumbs-up "></i>
                     <p>Best Quality</p>
                   </h3>
                 </div>
