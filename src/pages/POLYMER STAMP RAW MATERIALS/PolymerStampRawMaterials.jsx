@@ -1,82 +1,165 @@
-import React, { useEffect } from 'react'
-import Pic1 from '../images/FLASH STAMP MACHINE ACCESSORIES/062-600x400-1.jpg'
-import Pic2 from '../images/FLASH STAMP MACHINE ACCESSORIES/712eZLB6MBL._AC_SL1430_-600x420-2.jpg'
-import Pic3 from '../images/FLASH STAMP MACHINE ACCESSORIES/BASE-FILM-1.jpg'
-import Pic4 from '../images/FLASH STAMP MACHINE ACCESSORIES/BOARDER-TAPE-600x600-1.jpg'
-import Pic5 from '../images/FLASH STAMP MACHINE ACCESSORIES/COVER-FILM-600x600-1.jpg'
-import Pic6 from '../images/FLASH STAMP MACHINE ACCESSORIES/DENSITY-ENHANCER-600x900-1.jpg'
-import Pic7 from '../images/FLASH STAMP MACHINE ACCESSORIES/KIVIMarkings21-6-1927-600x600-1.jpg'
-import Pic8 from '../images/FLASH STAMP MACHINE ACCESSORIES/KIVIMarkings21-6-1940-600x600-1.jpg'
-import Pic9 from '../images/FLASH STAMP MACHINE ACCESSORIES/KIVIMarkings21-6-199-600x600-1.jpg'
-import Pic10 from '../images/FLASH STAMP MACHINE ACCESSORIES/WhatsApp-Image-2021-12-02-at-12.42.24-PM.jpeg'
-import Pic11 from '../images/FLASH STAMP MACHINE ACCESSORIES/fixture-600x600-1.jpg'
-import Pic12 from '../images/FLASH STAMP MACHINE ACCESSORIES/ohp-pet-sheet-transparent-2-1 (1).png'
-import Pic13 from '../images/FLASH STAMP MACHINE ACCESSORIES/ohp-pet-sheet-transparent-2-1.png'
-import Pic14 from '../images/FLASH STAMP MACHINE ACCESSORIES/tissue-tape-600x600-1.jpg'
-import PageHeader from '../../Component/PageHeader/PageHeader';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+
+import PageHeader from "../../Component/PageHeader/PageHeader";
+import { useParams, useNavigate } from "react-router-dom";
+import { serverURL, getData, postData } from '../../services/FetchNodeAdminServices';
 
 export default function PolymerStampRawMaterials() {
+ 
+              const { subcategoryId } = useParams();
+    const [selectedProduct, setSelectedProduct] = useState([]);
+     const [selectedProduct1, setSelectedProduct1] = useState("");
    
-  
+     const [name1, setName1] = useState("");
+     const [mailid, setMailid] = useState("");
+     const [phoneno, setPhoneno] = useState("");
+     const [message1, setMessage1] = useState("");
+   
+     const navigate = useNavigate();
+ 
+ 
+     
+       useEffect(() => {
+     
+         const fetchAllProductdetail = async () => {
+           try {
+             var result = await postData('userinterface/user_get_all_oneproduct_by_subcategoryid', { subcategoryid: subcategoryId });
+             if (result.status) {
+               setSelectedProduct(result.data);
+               // console.log('sssssssssssssss', result.data[0])
+     
+             } else {
+               console.error("Failed to fetch categories:", result.message);
+             }
+           } catch (error) {
+             console.error("Error fetching categories:", error);
+           }
+         };
+     
+         fetchAllProductdetail();
+     
+       }, [subcategoryId])
+   
+       
+ 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, []);  
-
-    const data = [
-        { id: 1, title: "Product 1", description: "DETACK POWDER", image: Pic1 },
-        { id: 2, title: "Product 2", description: "BASE FILM SMALL SIZE (250 X 350 MM)", image:  Pic2 },
-        { id: 3, title: "Product 3", description: "BASE FILM FULL SIZE (500 X 700 MM)", image:  Pic3 },
-        { id: 4, title: "Product 4", description: "BORDER TAPE", image:  Pic4 },
-        { id: 5, title: "Product 5", description: "COVER FILM ROLL", image:  Pic5 },
-        { id: 6, title: "Product 6", description: "DENSITY ENHANCER", image:  Pic6 },
-        { id: 7, title: "Product 7", description: " DEVELOPER (A+B) POWDER", image:  Pic7 },
-        { id: 8, title: "Product 8", description: " SOFT BRUSH", image:  Pic8 },
-        { id: 9, title: "Product 9", description: " LIQUID PHOTOPOLYMER ORANGE RESINE", image:  Pic9 },
-        { id: 10, title: "Product 10", description: "TLIQUID PHOTOPOLYMER CLEAR RESIN", image:  Pic10 },
-        { id: 11, title: "Product 11", description: "FIXTURE POWDER", image:  Pic11 },
-        { id: 12, title: "Product 12", description: "LASER PRINTING FILM (LPF) A4 SIZE", image:  Pic12 },
-        { id: 13, title: "Product 13", description: "LASER PRINTING FILM (LPF) A4 SIZE", image:  Pic13 },
-        { id: 14, title: "Product 14", description: "TISSUE TAPE", image:  Pic14 },
-      ];
-    
-      const navigate = useNavigate();
-    
-      const handleContact = () => {
-        navigate("/contactus");
-      }
-
-
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }, []);
+ 
+   const handleShow = (product) => {
+     setSelectedProduct1(product);
+   };
+ 
+   const handleClose = () => {
+     setSelectedProduct1("");
+   };
+ 
+   const handleSubmit = async (e) => {
+     e.preventDefault();
+ 
+     var result = await postData('useraddress/user_submit', {
+               name: name1,
+               mailid: mailid,
+               mobileno: phoneno,
+               message: message1
+     });
+ 
+     if (result.status) {
+       alert("Form submitted successfully!");
+ 
+       // Reset form fields
+             setName1("");
+             setMailid("");
+             setPhoneno("");
+             setMessage1("");
+             
+             window.location.reload(); // Refresh the page after navigation
+       // Close modal
+       handleClose();
+     } else {
+       console.error("Failed to submit form:", result.message);
+     }
+   };
+ 
+ 
   return (
-    <> 
-<PageHeader topheading="Polymer Stamp Raw Materials" title="polymerstamprawmaterial"/> 
-      
-<div className="container">
-  <div className="cards-container">
-     {data.map((item) => (
-    <div key={item.id} className="card">
-      <img src={item.image} alt={item.title} className="card-image" />
-      <div className="card-content">
-        <h3>{item.title}</h3>
-        <p>{item.description}</p>
-      <button 
-      onClick={handleContact}
-      className='card-button'
-      > 
-      Details
-      </button>
+    <>
+      <PageHeader topheading="Polymer Stamp Raw Materials" title="polymerstamprawmaterial" />
 
+      <div className="container">
+         <div className="cards-container">
+                   {selectedProduct.map((item) => (
+                              <div key={item.productid} className="card">
+                                <img src={`${serverURL}/images/${item.picture}`} alt={item.productname} className="card-image" />
+                                <div className="card-content">
+                                  <h3>{item.productname}</h3>
+                                  {/* <p>{item.description}</p> */}
+                                  <button
+                                    className="card-button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#productModal"
+                                    onClick={() => handleShow(item)}
+                                  >
+                                    Details
+                                  </button>
+                                </div>
+                              </div>
+                            ))}
+                </div>
       </div>
-     </div>
-    ))}
-  </div>
-</div>
 
+      {/* Modal */}
+      <form onSubmit={handleSubmit} className="needs-validation" noValidate >
+        <div className="modal fade" id="productModal" tabIndex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content stylishform text-center">
+              <div className="modal-header">
+                <h5 className="modal-title" id="productModalLabel">{selectedProduct1?.productname}</h5>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={handleClose}></button>
+              </div>
+              <div className="modal-body">
+                {selectedProduct1 && (
+                  <>
+                    <p>{selectedProduct1.productname}</p>
 
+                    <div className="form-floating mb-2">
+                      <input type="text" className="form-control" value={name1} onChange={(e) => setName1(e.target.value)} placeholder="Full Name" required />
+                      <label htmlFor="floatingName">Name</label>
+                    </div>
 
+                    <div className="form-floating mb-2">
+                      <input type="email" className="form-control" value={mailid} onChange={(e) => setMailid(e.target.value)} placeholder="name@example.com" required />
+                      <label htmlFor="floatingEmail">Email address</label>
+                    </div>
+
+                    <div className="form-floating mb-2">
+                      <input type="tel" className="form-control" value={phoneno} onChange={(e) => setPhoneno(e.target.value)} placeholder="Phone" required />
+                      <label htmlFor="floatingPhone">Phone Number</label>
+                    </div>
+
+                    <div className="form-floating mb-2">
+                      <textarea className="form-control" placeholder="Leave a Message here" value={message1} onChange={(e) => setMessage1(e.target.value)} style={{ height: "100px" }} required></textarea>
+                      <label htmlFor="floatingTextarea2">Requirement</label>
+                    </div>
+
+                    <div className="d-flex justify-content-between">
+                      <button type="submit" className="btn btn-primary">
+                        Submit
+                      </button>
+                    </div>
+
+                  </>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
     </>
-  )
+  );
 }
+
+

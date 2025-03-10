@@ -5,11 +5,11 @@ import Navbar from '../Component/Navbar/Navbar';
 import Footer from '../Component/Footer/Footer';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import OldPrinterSeries from './OldPrinterSeries/OldPrinterSeries';
-import NewPrinterSeries from './NewPrinterSeries/NewPrinterSeries';
-import StampPads from './StampPads/StampPads';
+// import OldPrinterSeries from './OldPrinterSeries/OldPrinterSeries';
+// import NewPrinterSeries from './NewPrinterSeries/NewPrinterSeries';
+// import StampPads from './StampPads/StampPads';
 import AboutUs from './AboutUs/AboutUs';
-import Inks from './Inks/Inks';
+// import Inks from './Inks/Inks';
 import Contactus from './ContactUs/Contactus';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -39,24 +39,50 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/oldprinterseries" element={<OldPrinterSeries/>} />
-          <Route path="/newprinterseries" element={<NewPrinterSeries/>} />
-          <Route path="/stamppads" element={<StampPads />} />
-          <Route path="/inks" element={<Inks/>} />
+          {/* <Route path="/oldprinterseries" element={<OldPrinterSeries/>} /> */}
+          {/* <Route path="/newprinterseries" element={<NewPrinterSeries/>} /> */}
+          {/* <Route path="/stamppads" element={<StampPads />} /> */}
+          {/* <Route path="/inks" element={<Inks/>} /> */}
           <Route path="/contactus" element={<Contactus/>} />
           <Route path="/about-us" element={<AboutPage/>} />
-          <Route path="/penstamp" element={<PenStamp/>} />
-          <Route path="/flashmachineries" element={<FlashMachineries/>} />
-          <Route path="/embossingseal" element={<EmbossingSeal/>}/>
-          <Route path="/automaticnumbermachine" element={<NumberingMachine/>}/>
-          <Route path="/selfinkstamp" element={<SelfInkStamp/>}/>
-          <Route path="/preinkstamp" element={<PreInkStamp/>}/>
+
+          <Route path="/PEN STAMP" element={<PenStamp/>} />
+          <Route path="/PEN STAMP/:subcategoryId" element={<PenStamp/>} />
+
+          <Route path="/SELF INK STAMP" element={<SelfInkStamp/>}/>
+          <Route path="/SELF INK STAMP/:subcategoryId" element={<SelfInkStamp/>}/>
+
+          <Route path="/PRE INK STAMP" element={<PreInkStamp/>}/>
+          <Route path="/PRE INK STAMP/:subcategoryId" element={<PreInkStamp/>}/>
+
+          <Route path="/SELF INK DATER STAMP" element={<SelfInkDaterStamp/>}/>
+          <Route path="/SELF INK DATER STAMP/:subcategoryId" element={<SelfInkDaterStamp/>}/>
+{/********************************************************************************************************** */}
+          <Route path="/AUTOMATIC NUMBERING MACHINE" element={<NumberingMachine/>}/>
+          <Route path="/AUTOMATIC NUMBERING MACHINE/:subcategoryId" element={<NumberingMachine/>}/>
+
+          <Route path="/EMBOSSING SEAL" element={<EmbossingSeal/>}/>
+          <Route path="/EMBOSSING SEAL/:subcategoryId" element={<EmbossingSeal/>}/>
+
+          <Route path="/POLYMER STAMP MAKING MACHINES" element={<PolymerStampMakingMachine/>}/>
+          <Route path="/POLYMER STAMP MAKING MACHINES/:subcategoryId" element={<PolymerStampMakingMachine/>}/>
+          
+
+          <Route path="/FLASH STAMP MACHINE" element={<FlashMachineries/>} />
+          <Route path="/FLASH STAMP MACHINE/:subcategoryId" element={<FlashMachineries/>} />
+
+          <Route path="/FLASH STAMP RAW MATERIALS"  element={<FlashStampRawMaterial/>}/>
+          <Route path="/FLASH STAMP RAW MATERIALS/:subcategoryId"  element={<FlashStampRawMaterial/>}/>
+
+          <Route path="/POLYMER STAMP RAW MATERIALS" element={<PolymerStampRawMaterials/>}/>
+          <Route path="/POLYMER STAMP RAW MATERIALS/:subcategoryId" element={<PolymerStampRawMaterials/>}/>
+    
+
           <Route path="/isocertification" element={<IsoCertification/>}/>
-          <Route path="/selfinkdaterstamp" element={<SelfInkDaterStamp/>}/>
-          <Route path="/polymerstampmakingmachine" element={<PolymerStampMakingMachine/>}/>
-          <Route path="/polymerstamprawmaterial" element={<PolymerStampRawMaterials/>}/>
-          <Route path="/flashstamprawmaterial"  element={<FlashStampRawMaterial/>}/>
-          <Route path="/flashstampmachineaccessories"  element={<FlashStampMachineAccessories/>}/>
+         
+
+          <Route path="/flashstampmachineaccessories/:subCategories4"  element={<FlashStampMachineAccessories/>}/>
+          <Route path="/flashstampmachineaccessories"  element={<FlashStampMachineAccessories/>}/>  
            
         </Routes>
       {/* </div> */}

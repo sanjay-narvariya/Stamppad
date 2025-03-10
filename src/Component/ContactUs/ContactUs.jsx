@@ -1,9 +1,90 @@
-import React from "react";
 import "./contactus.css";
+import React, { useEffect, useState } from "react";
+import { serverURL, getData, postData } from '../../services/FetchNodeAdminServices';
 
 
 
 const ContactUs = () => {
+
+                               const [name1, setName1] = useState("");
+                               const [mailid, setMailid] = useState("");
+                               const [phoneno, setPhoneno] = useState("");
+                               const [message1, setMessage1] = useState("");
+                               const [phoneNo , setPhoneNo] = useState("");
+                               const [mailId , setMailId] = useState("");
+
+
+const imgStyle = {
+  color: " #ff004d"
+};
+                               
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    var result = await postData('useraddress/user_submit', {
+              name: name1,
+              mailid: mailid,
+              mobileno: phoneno,
+              message: message1
+    });
+
+    if (result.status) {
+      alert("Form submitted successfully!");
+
+      // Reset form fields
+            setName1("");
+            setMailid("");
+            setPhoneno("");
+            setMessage1("");
+            
+            window.location.reload(); // Refresh the page after navigation
+      // Close modal
+      
+    } else {
+      console.error("Failed to submit form:", result.message);
+    }
+  };
+
+  const getPhone = async ()=>{
+     try {
+                      const result = await getData('adminlogin/phoneno');
+                      if (result.status) {
+                          setPhoneNo(result.data.phoneno || {});
+                          setMailId(result.data.mailid || {});
+                          console.log('phone no hgyugeuiufe',result.data)
+                         
+                      } else {
+                          console.error("Failed to fetch phone number:", result.message);
+                      }
+                  } catch (error) {
+                      console.error("Error fetching phone number:", error);
+                  }
+
+  }
+
+//   const getPicture = async ()=>{
+//     try {
+//                      const result = await getData('mainbanner/display_all_mainbanner');
+//                      if (result.status) {
+//                          setImage(result.data[3].phoneno || {});
+//                          console.log('phone no hgyugeuiufe',result.data)
+                        
+//                      } else {
+//                          console.error("Failed to fetch phone number:", result.message);
+//                      }
+//                  } catch (error) {
+//                      console.error("Error fetching phone number:", error);
+//                  }
+
+//  }
+
+
+useEffect(()=>{
+  getPhone();
+  // getPicture();
+},[])
+
+
   return (
     <>    
       <section>
@@ -15,32 +96,30 @@ const ContactUs = () => {
               <p> <i className="bi bi-geo-alt-fill"></i>  I-245, Sector - 5, DSIIDC, Bawana Industrial Area, Delhi, India.
                 Pin Code - 110039</p>
               <strong>Phone:</strong>
-              <p> <i className="bi bi-telephone-fill"></i>+91 7982167578</p>
+              <p> <i className="bi bi-telephone-fill"></i>+91 {phoneNo}</p>
               <strong>Email:</strong>
-              <p> <i className="bi bi-envelope-at-fill"></i> ddplastic@.com</p>
+              <p> <i className="bi bi-envelope-at-fill"></i> {mailId}</p>
             </div>
           </div>
           <div className="contact-form">
             <h2>Get in touch</h2>
             <p>We will catch you as early as we receive the message</p>
-            <form>
+             <form  onSubmit={handleSubmit} className="needs-validation" noValidate>
               <div className="form-group">
-                <input type="text" placeholder="Enter name" />
-                <input type="email" placeholder="Enter email" />
+                 <input type="text" className="form-control" value={name1} onChange={(e) => setName1(e.target.value)} placeholder="Full Name" required />
+                <input type="email" className="form-control" value={mailid} onChange={(e) => setMailid(e.target.value)} placeholder="name@example.com" required />
               </div>
               <div className="form-group">
-                <input type="text" placeholder="Enter mobile" />
-                <select>
-                  <option>Select Requirement</option>
-                </select>
+                <input type="tel" className="form-control" value={phoneno} onChange={(e) => setPhoneno(e.target.value)} placeholder="Phone" required />
+              
               </div>
-              <textarea placeholder="Enter your message"></textarea>
+               <textarea className="form-control" placeholder="Leave a Message here" value={message1} onChange={(e) => setMessage1(e.target.value)} style={{ height: "100px" }} required></textarea>
               <div className="terms">
-                <input type="checkbox" id="terms" />
+                <input type="checkbox" id="terms" required />
                 <label htmlFor="terms"> I agree to the <span>Terms & Conditions</span> of Business Name.</label>
               </div>
               <button className="button1" type="submit">Submit</button>
-            </form>
+            </form> 
           </div>
         </div>
 
@@ -65,7 +144,7 @@ const ContactUs = () => {
               />
               <div className="contact-box">
                 <p>Contact Now</p>
-                <h2>9810644805</h2>
+                <h2 >{phoneNo}</h2>
               </div>
             </div>
           </div>

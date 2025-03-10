@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function IsoCertification(){
 
@@ -36,8 +37,8 @@ export default function IsoCertification(){
                             </b>
 
                        <div>
-                       <button className='btn btn-primary'>Read More</button>
-                       </div>
+                             <Link to={"/about-us"}>   <button className='btn btn-primary'>Read More</button></Link>    
+                           </div>
                         </div>
                     </div>
                     <div className="col-md-3">

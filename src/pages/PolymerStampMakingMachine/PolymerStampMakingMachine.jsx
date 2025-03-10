@@ -1,77 +1,164 @@
-import React, { useEffect } from 'react'
-import Pic1 from '../images/Machine1/31eGJrnmsUL._AC_UL600_SR600,600_.jpg'
-import Pic2 from '../images/Machine1/MACHINE1.jpg'
-import Pic3 from '../images/Machine1/polymer-stamp-machines-8-tube.jpg'
-import Pic4 from '../images/Machine1/stamp-making-machine-500x500.webp'
-import Pic5 from '../images/Machine1/12-4-600x400-1 (1).jpg'
-import Pic6 from '../images/Machine1/12-4-600x400-1.jpg'
-import Pic7 from '../images/Machine1/12-8-600x400-1.jpg'
-import Pic8 from '../images/Machine1/18-4-600x400-1 (1).jpg'
-import Pic9 from '../images/Machine1/18-4-600x400-1.jpg'
-import Pic10 from '../images/Machine1/18-8-600x400-1.jpg'
+import React, { useEffect, useState } from "react";
 
-
-import { useNavigate } from 'react-router-dom';
-import PageHeader from '../../Component/PageHeader/PageHeader'
+import PageHeader from "../../Component/PageHeader/PageHeader";
+import { useParams, useNavigate } from "react-router-dom";
+import { serverURL, getData, postData } from '../../services/FetchNodeAdminServices';
 
 export default function PolymerStampMakingMachine() {
 
+             const { subcategoryId } = useParams();
+   const [selectedProduct, setSelectedProduct] = useState([]);
+    const [selectedProduct1, setSelectedProduct1] = useState("");
   
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
+    const [name1, setName1] = useState("");
+    const [mailid, setMailid] = useState("");
+    const [phoneno, setPhoneno] = useState("");
+    const [message1, setMessage1] = useState("");
+  
+    const navigate = useNavigate();
+
+
+    
+      useEffect(() => {
+    
+        const fetchAllProductdetail = async () => {
+          try {
+            var result = await postData('userinterface/user_get_all_oneproduct_by_subcategoryid', { subcategoryid: subcategoryId });
+            if (result.status) {
+              setSelectedProduct(result.data);
+              // console.log('sssssssssssssss', result.data[0])
+    
+            } else {
+              console.error("Failed to fetch categories:", result.message);
+            }
+          } catch (error) {
+            console.error("Error fetching categories:", error);
+          }
+        };
+    
+        fetchAllProductdetail();
+    
+      }, [subcategoryId])
+  
+      
+
+ useEffect(() => {
+         window.scrollTo({
+           top: 0,
+           behavior: "smooth",
+         });
+       }, []);
+
+  const handleShow = (product) => {
+    setSelectedProduct1(product);
+  };
+
+  const handleClose = () => {
+    setSelectedProduct1("");
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    var result = await postData('useraddress/user_submit', {
+              name: name1,
+              mailid: mailid,
+              mobileno: phoneno,
+              message: message1
     });
-  }, []);
 
-    const data = [
-        { id: 1, title: "Machine 1", description: "POLY 18/08 MACHINE", image: Pic1 },
-        { id: 2, title: "Machine 2", description: "This is the second card.", image:  Pic2 },
-        { id: 3, title: "Machine 3", description: "POLY 18/08 MACHINE", image:  Pic3 },
-        { id: 4, title: "Machine 4", description: "POLY 18/08 MACHINE", image:  Pic4 },
-        { id: 5, title: "Machine 5", description: "POLY 12/04 MACHINE", image:  Pic5 },
-        { id: 6, title: "Machine 6", description: " POLYMAER MACHINE’S TUBE 18 INCH 15 WATT(F18INCH15W)", image:  Pic6 },
-        { id: 7, title: "Machine 7", description: "POLY 12/08 MACHINE", image:  Pic7 },
-        { id: 8, title: "Machine 8", description: "POLY 18/04 MACHINE", image:  Pic8 },
-        { id: 9, title: "Machine 9", description: "POLY 18/04 MACHINE", image:  Pic9 },
-        { id: 10, title: "Machine 10", description: "POLY 18/08 MACHINE", image:  Pic10 },
-      ];
-    
-      const navigate = useNavigate();
-    
-      const handleContact = () => {
-        navigate("/contactus");
-      }
+    if (result.status) {
+      alert("Form submitted successfully!");
 
+      // Reset form fields
+            setName1("");
+            setMailid("");
+            setPhoneno("");
+            setMessage1("");
+            
+            window.location.reload(); // Refresh the page after navigation
+      // Close modal
+      handleClose();
+    } else {
+      console.error("Failed to submit form:", result.message);
+    }
+  };
 
 
   return (
     <>
-
-<PageHeader topheading="Polymer Stamp Making Machine" title="polymerstampmakingmachine"/> 
-
-         
-    <div className="container">
+      <PageHeader topheading="Polymer Stamp Making Machine" title="polymerstampmakingmachine" />
+      <div className="container">
       <div className="cards-container">
-         {data.map((item) => (
-        <div key={item.id} className="card">
-          <img src={item.image} alt={item.title} className="card-image" />
-          <div className="card-content">
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-          <button 
-          onClick={handleContact}
-          className='card-button'
-          > 
-          Details
-          </button>
-
-          </div>
-         </div>
-        ))}
+                 {selectedProduct.map((item) => (
+                            <div key={item.productid} className="card">
+                              <img src={`${serverURL}/images/${item.picture}`} alt={item.productname} className="card-image" />
+                              <div className="card-content">
+                                <h3>{item.productname}</h3>
+                                {/* <p>{item.description}</p> */}
+                                <button
+                                  className="card-button"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#productModal"
+                                  onClick={() => handleShow(item)}
+                                >
+                                  Details
+                                </button>
+                              </div>
+                            </div>
+                          ))}
+              </div>
       </div>
-    </div>
 
+      {/* Modal */}
+      <form onSubmit={handleSubmit} className="needs-validation" noValidate >
+        <div className="modal fade" id="productModal" tabIndex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content stylishform text-center">
+              <div className="modal-header">
+                <h5 className="modal-title" id="productModalLabel">{selectedProduct1?.productname}</h5>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={handleClose}></button>
+              </div>
+              <div className="modal-body">
+                {selectedProduct1 && (
+                  <>
+                    <p>{selectedProduct1.productname}</p>
+
+                    <div className="form-floating mb-2">
+                      <input type="text" className="form-control" value={name1} onChange={(e) => setName1(e.target.value)} placeholder="Full Name" required />
+                      <label htmlFor="floatingName">Name</label>
+                    </div>
+
+                    <div className="form-floating mb-2">
+                      <input type="email" className="form-control" value={mailid} onChange={(e) => setMailid(e.target.value)} placeholder="name@example.com" required />
+                      <label htmlFor="floatingEmail">Email address</label>
+                    </div>
+
+                    <div className="form-floating mb-2">
+                      <input type="tel" className="form-control" value={phoneno} onChange={(e) => setPhoneno(e.target.value)} placeholder="Phone" required />
+                      <label htmlFor="floatingPhone">Phone Number</label>
+                    </div>
+
+                    <div className="form-floating mb-2">
+                      <textarea className="form-control" placeholder="Leave a Message here" value={message1} onChange={(e) => setMessage1(e.target.value)} style={{ height: "100px" }} required></textarea>
+                      <label htmlFor="floatingTextarea2">Requirement</label>
+                    </div>
+
+                    <div className="d-flex justify-content-between">
+                      <button type="submit" className="btn btn-primary">
+                        Submit
+                      </button>
+                    </div>
+
+                  </>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
     </>
-  )
+  );
 }
+
+
