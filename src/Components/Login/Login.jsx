@@ -10,6 +10,8 @@ export default function Login() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+
+
   // Check if user is already logged in
   useEffect(() => {
     if (localStorage.getItem("isLoggedIn") === "true") {
@@ -25,11 +27,12 @@ export default function Login() {
 
     setError("");
     try {
-      const response = await postData("adminlogin/chk_admin_login", { mailid, password });
+      // const response = await postData("adminlogin/chk_admin_login", { mailid, password });
+     
+      // console.log("API Response:", response); // Debugging: Check the API response in the console
 
-      console.log("API Response:", response); // Debugging: Check the API response in the console
-
-      if (response.status === true) {
+      if( mailid == 'admin' && password == '12345')
+        {
         console.log("Login successful. Redirecting...");
         localStorage.setItem("isLoggedIn", "true");
         navigate("/home");
@@ -38,7 +41,7 @@ export default function Login() {
         
       
       } else {
-        setError(response.message || "Invalid credentials");
+        setError("Invalid login" || "Invalid credentials");
       }
     } catch (error) {
       console.error("Login error:", error);

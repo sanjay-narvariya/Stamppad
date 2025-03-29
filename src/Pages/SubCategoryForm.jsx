@@ -11,6 +11,7 @@ export default function SubCategoryForm() {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [subCategoryName, setSubCategoryName] = useState('');
+  const [details, setDetails] = useState('');
    const [subCategoryIcon, setSubCategoryIcon] = useState({ bytes: "", fileName: testingimage });
 
   const [loading, setLoading] = useState(false);
@@ -37,9 +38,10 @@ export default function SubCategoryForm() {
   // Fetch categories from backend
   const fetchCategories = async () => {
     try {
-      const result = await getData('category/display_all_category');
+      const result = await getData('category/get-all-category');
+     
       if (result.status) {
-        setCategories(result.data);
+        setCategories(result.data.categories);
       } else {
         setMessage({ type: 'error', text: 'Failed to load categories' });
       }
@@ -51,11 +53,13 @@ export default function SubCategoryForm() {
   // Fetch subcategory details if editing
 
   const fetchSubCategoryDetails = async () => {
-    const result = await postData('subcategory/display_subcategory_id', { subcategoryid });
+    const result = await getData(`subcategory/get-subcategory/${subcategoryid}`, {});
+       console.log(result.data.parent_category_id)
     if (result.status) {
-      setSubCategoryName(result.data[0].subcategoryname);
-      setSelectedCategory(result.data[0].categoryid);
-      setSubCategoryIcon({ bytes: result.data[0].subcategoryicon, fileName: `${serverURL}/images/${result.data[0].subcategoryicon}`})
+      setSubCategoryName(result.data.subcategoryname);
+      setDetails(result.data.details);
+      setSelectedCategory(result.data.parent_category_id._id);
+      setSubCategoryIcon({ bytes: result.data.subcategoryimage, fileName: `${serverURL}/${result.data.subcategoryimage}`})
     } else {
       setMessage({ type: 'error', text: 'Failed to fetch subcategory details!' });
     }
@@ -67,10 +71,10 @@ export default function SubCategoryForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!selectedCategory || !subCategoryName.trim() || !subCategoryIcon) {
-      setMessage({ type: 'error', text: 'All fields are required!' });
-      return;
-    }
+    // if (!selectedCategory || !subCategoryName.trim() || !subCategoryIcon) {
+    //   setMessage({ type: 'error', text: 'All fields are required!' });
+    //   return;
+    // }
 
     setLoading(true);
     setMessage({ type: '', text: '' });
@@ -78,15 +82,18 @@ export default function SubCategoryForm() {
     try {
 
                             let formData = new FormData();
-                          formData.append("categoryid", selectedCategory);
                           formData.append("subcategoryname", subCategoryName);
-                          formData.append("subcategoryicon", subCategoryIcon.bytes);
+                          formData.append("parent_category_id", selectedCategory);
+                          formData.append("subcategoryimage", subCategoryIcon.bytes);
+                          formData.append("details", details);
+                        
 
       let result;
       if (subcategoryid) {
         // Update existing subcategory
-        formData.append("subcategoryid", subcategoryid);
-        result = await postData('subcategory/edit_subcategory_data', formData);
+        // formData.append("subcategoryid", subcategoryid);
+
+        result = await postData(`subcategory/update-subcategory-with-picture/${subcategoryid}`, formData);
 
         console.log("FormData contents:");
         formData.forEach((value, key) => {
@@ -95,7 +102,7 @@ export default function SubCategoryForm() {
 
       } else {
         // Add new subcategory
-        result = await postData('subcategory/subcategory_submit', formData);
+        result = await postData('subcategory/subcategory-submit', formData);
       }
 
       if (result.status) {
@@ -115,7 +122,7 @@ export default function SubCategoryForm() {
     <div className="container mt-5">
       <div className="card shadow-lg border-0 rounded-lg">
         <div className="card-header bg-primary text-light d-flex justify-content-between align-items-center">
-          <h5 className="mb-0">{subcategoryid ? 'Edit Sub Category' : 'Add Sub Category'}</h5>
+          <h5 className="mb-0">{subcategoryid ? 'Update Sub Category' : 'Add Sub Category'}</h5>
           <Link to="/subcategory" className="text-light">
             <FaBackward className="fs-4" />
           </Link>
@@ -127,6 +134,7 @@ export default function SubCategoryForm() {
             </div>
           )}
           <form onSubmit={handleSubmit}>
+
             <div className="mb-3">
               <label className="form-label">Category</label>
               <select
@@ -137,7 +145,7 @@ export default function SubCategoryForm() {
               >
                 <option value="">Choose Category</option>
                 {categories.map((category) => (
-                  <option key={category.categoryid} value={category.categoryid}>
+                  <option key={category._id} value={category._id}>
                     {category.categoryname}
                   </option>
                 ))}
@@ -151,7 +159,20 @@ export default function SubCategoryForm() {
                 placeholder="Enter sub category name"
                 value={subCategoryName}
                 onChange={(e) => setSubCategoryName(e.target.value)}
-                required
+                // required
+              />
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="details" className="form-label">Sub Category Details</label>
+              <input
+                type="text"
+                className="form-control"
+                id="details"
+                placeholder="Enter subcategory details"
+                value={details}
+                onChange={(e) => setDetails(e.target.value)}
+                // required
               />
             </div>
 

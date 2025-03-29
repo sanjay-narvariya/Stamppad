@@ -9,11 +9,12 @@ export default function CategoryForm() {
 
   const { categoryid } = useParams(); // Get categoryid from URL
   const [categoryName, setCategoryName] = useState('');
+  const [details, setDetails] = useState('');
   const [categoryIcon, setCategoryIcon] = useState({ bytes: "", fileName: testingimage });
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' });
   const navigate = useNavigate();
-
+ 
 
   const imgStyle = {
     width: "50px",
@@ -31,10 +32,11 @@ export default function CategoryForm() {
   }, [categoryid]);
 
   const fetchCategoryDetails = async () => {
-    var result = await postData('category/display_category_id', { categoryid: categoryid });
+    var result = await getData(`category/get-category/${categoryid}`, {});
     if (result.status) {
        setCategoryName(result.data.categoryname);
-       setCategoryIcon({ bytes: result.data.categoryicon, fileName: `${serverURL}/images/${result.data.categoryicon}`})
+       setDetails(result.data.details);
+       setCategoryIcon({ bytes: result.data.categoryimage, fileName: `${serverURL}/${result.data.categoryimage}`})
     
     } else {
       setMessage({ type: 'error', text: 'Failed to fetch category details!' });
@@ -50,14 +52,14 @@ export default function CategoryForm() {
     try {
                   let formData = new FormData();
                   formData.append("categoryname", categoryName);
-                  formData.append("categoryicon", categoryIcon.bytes);
+                  formData.append("details", details);
+                  formData.append("categoryimage", categoryIcon.bytes);
                  
 
       if (categoryid) {
         // Update existing category
-        formData.append("categoryid", categoryid);
-        var result = await postData('category/edit_category_data', formData);
-
+        // formData.append("categoryid", categoryid);
+        var result = await postData(`category/update-category-with-picture/${categoryid}`, formData);
         console.log("FormData contents:");
         formData.forEach((value, key) => {
           console.log(key, value);
@@ -65,7 +67,7 @@ export default function CategoryForm() {
         
       } else {
         // Add new category
-        var result = await postData('category/category_submit', formData)
+        var result = await postData('category/category-submit', formData)
         
       }
 
@@ -92,7 +94,7 @@ export default function CategoryForm() {
     <div className="container mt-5">
       <div className="card shadow-lg border-0 rounded-lg p-4">
         <div className="card-header bg-primary text-light d-flex justify-content-between align-items-center">
-          <h5 className="mb-0">Add New Category</h5>
+         {categoryid? <h5 className="mb-0">Update Category</h5> :<h5 className="mb-0">Add New Category</h5> }
           <Link to="/home" className="text-light">
             <FaBackward className='fs-4' />
           </Link>
@@ -113,7 +115,20 @@ export default function CategoryForm() {
                 placeholder="Enter category name"
                 value={categoryName}
                 onChange={(e) => setCategoryName(e.target.value)}
-                required
+                // required
+              />
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="details" className="form-label">Category Details</label>
+              <input
+                type="text"
+                className="form-control"
+                id="details"
+                placeholder="Enter category details"
+                value={details}
+                onChange={(e) => setDetails(e.target.value)}
+                // required
               />
             </div>
 

@@ -9,8 +9,10 @@ import { useNavigate } from "react-router-dom";
 export default function AdminHome() {
   const [categoryList, setCategoryList] = useState([]);
   const navigate = useNavigate();
+  console.log(categoryList)
 
-  
+
+   
   const imgStyle = {
     width: "50px",
     height: "50px",
@@ -21,10 +23,9 @@ export default function AdminHome() {
 
   // Fetch all categories
   const fetchAllCategory = async () => {
-    const result = await getData('category/display_all_category');
+    const result = await getData('category/get-all-category');
     if (result.status) {
-      setCategoryList(result.data);
-      //alert(result.message);
+      setCategoryList(result.data.categories);
     }
   };
 
@@ -45,10 +46,10 @@ useEffect(()=>{
 
 const categoryDelete=async(item)=>{
 
-  var body={'categoryid':item}
+  // var body={'categoryid':item}
 
-   var result= await postData('category/delete_category',body)
-  if(result.status)
+  var result = await postData(`category/delete-category/${item}`, {});
+  if(result)
   {
     alert('Delete category successfully.....')
     setTimeout(() => navigate('/home'), 2000);
@@ -80,27 +81,29 @@ fetchAllCategory()
               <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>CategoryIcon</th>
+                <th>Details</th>
+                <th>CategoryImage</th>
                 <th>Edit</th>
                 <th>Delete</th>
               </tr>
             </thead>
             <tbody>
-              {categoryList.map((item) => (
-                <tr key={item.categoryid}>
-                  <td>{item.categoryid}</td>
+              {categoryList.map((item,i) => (
+                <tr key={item._id}>
+                  <td>{i}</td>
                   <td>{item.categoryname}</td>
-                  <td>{item.categoryicon != "" ? <img style={imgStyle} src={`${serverURL}/images/${item.categoryicon}`} alt="Product Preview" /> : ""}</td>
+                  <td>{item.details}</td>
+                  <td>{item.categoryimage != "" ? <img style={imgStyle} src={`${serverURL}/${item.categoryimage}`} alt="Product Preview" /> : ""}</td>
                   <td>
                     <button 
                       className="btn btn-sm btn-warning text-light"
-                      onClick={() => navigate(`/categoryform/${item.categoryid}`)}
+                      onClick={() => navigate(`/categoryform/${item._id}`)}
                     >
                       <FaEdit className="fs-5" />
                     </button>
                   </td>
                   <td>
-                    <button className="btn btn-sm btn-danger"  onClick={() => categoryDelete(item.categoryid)} >
+                    <button className="btn btn-sm btn-danger"  onClick={() => categoryDelete(item._id)} >
                       <FaTrashAlt className="fs-5" />
                     </button>
                   </td>

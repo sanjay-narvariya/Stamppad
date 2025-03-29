@@ -5,13 +5,7 @@ import Login from "./Components/Login/Login";
 import CategoryForm from "./Pages/CategoryForm";
 import SubCategory from "./Pages/SubCategory";
 import SubCategoryForm from "./Pages/SubCategoryForm";
-import ProductForm from "./Pages/ProductForm";
-import Product from "./Pages/Product";
 import Enquiry from "./Pages/Enquiry";
-import MainbannerForm from "./Pages/MainbannerForm";
-import MainBanner1 from "./Pages/MainBanner1";
-import OneProduct from "./Pages/OneProduct";
-import OneProductForm from "./Pages/OneProductForm";
 import { useNavigate } from "react-router-dom";
 import './App.css'
 
@@ -34,7 +28,8 @@ const Sidebar = () => {
         <li className="nav-item">
           <Link className="nav-link" to="/subcategory">SubCategory</Link>
         </li>
-        <li className="nav-item">
+
+       {/* <li className="nav-item">
           <Link className="nav-link" to="/mainbanner">MainBanner</Link>
         </li>
         <li className="nav-item">
@@ -43,6 +38,8 @@ const Sidebar = () => {
         <li className="nav-item">
           <Link className="nav-link" to="/product">Multi Products</Link>
         </li>
+                   */}
+
         <li className="nav-item">
           <Link className="nav-link" to="/enquiry">Enquiry</Link>
         </li>
@@ -53,9 +50,10 @@ const Sidebar = () => {
     </div>)
 };
 
+
+
 const AdminPanel = () => {
   const isLoggedIn = localStorage.getItem("isLoggedIn");
-
 
   return (
     <Router>
@@ -73,20 +71,10 @@ const AdminPanel = () => {
 
                 <Route path="/subcategory" element={<SubCategory />} />
                 <Route path="/subcategoryform" element={<SubCategoryForm />} />
-                
                 <Route path="/subcategoryform/:subcategoryid" element={<SubCategoryForm />} />
-                <Route path="/productForm" element={<ProductForm />} />
-                <Route path="/productForm/:productid" element={<ProductForm />} />
-                <Route path="/product" element={<Product />} />
+
                 <Route path="/enquiry" element={<Enquiry />} />
-
-                <Route path="/mainbannerform" element={<MainbannerForm />} />
-                <Route path="/mainbannerform/:bannerid" element={<MainbannerForm />} />
-                <Route path="/mainbanner" element={<MainBanner1 />} />
-
-                <Route path="/oneproductform" element={<OneProductForm />} />
-                <Route path="/oneproductform/:productid" element={<OneProductForm />} /> 
-                <Route path="/oneproduct" element={<OneProduct />} />
+                 
               </>
             ) : (
               <Route path="*" element={<Navigate to="/" />} />

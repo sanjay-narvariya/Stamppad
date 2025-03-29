@@ -7,8 +7,8 @@ import { postData, getData,serverURL } from "../services/FetchNodeAdminServices"
 export default function SubCategory() {
     const navigate = useNavigate();
     const [subcategoryList, setSubcategoryList] = useState([]);
-
-
+            
+ 
     
   const imgStyle = {
     width: "50px",
@@ -38,7 +38,7 @@ export default function SubCategory() {
     /****************************** Fetch all subcategories **********************/
     const fetchAllSubcategory = async () => {
         try {
-            const result = await getData('subcategory/display_all_subcategory');
+            const result = await getData('subcategory/get-all-subcategory');
             if (result.status) {
                 setSubcategoryList(result.data);
             } else {
@@ -56,9 +56,9 @@ export default function SubCategory() {
     /****************************** Delete Subcategory **********************/
 
 const handleDelete = async (item) => {
-        var body={'subcategoryid':item}
+        // var body={'subcategoryid':item}
  
-      var result = await postData('subcategory/delete_subcategory', body)
+      var result = await postData(`subcategory/delete-subcategory/${item}`, {})
       if (result.status) {
           alert("Subcategory deleted successfully",result);
           setTimeout(() => navigate('/subcategory'), 2000);
@@ -87,22 +87,24 @@ const handleDelete = async (item) => {
                                 <th>ID</th>
                                 <th>Category Name</th>
                                 <th>Sub Category Name</th>
-                                <th>Sub Category Icon</th>
+                                <th>Sub Category Details</th>
+                                <th>Sub Category Image</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
                             {subcategoryList.map((item, index) => (
-                                <tr key={index}>
-                                    <td>{item.subcategoryid}</td>
-                                    <td>{item.categoryname}</td>
+                                <tr key={item._id}>
+                                    <td>{index}</td>
+                                    <td>{item.parent_category_id.categoryname}</td>
                                     <td>{item.subcategoryname}</td>
-                                    <td>{item.subcategoryicon != "" ? <img style={imgStyle} src={`${serverURL}/images/${item.subcategoryicon}`} alt="Product Preview" /> : ""}</td>
+                                    <td>{item.details}</td>
+                                    <td>{item.subcategoryimage != "" ? <img style={imgStyle} src={`${serverURL}/${item.subcategoryimage}`} alt="Product Preview" /> : ""}</td>
                                     <td>
                                         <button
                                             className="btn btn-sm btn-warning text-light"
-                                            onClick={() => navigate(`/subcategoryform/${item.subcategoryid}`)}
+                                            onClick={() => navigate(`/subcategoryform/${item._id}`)}
                                         >
                                             <FaEdit className="fs-5" />
                                         </button>
@@ -110,7 +112,7 @@ const handleDelete = async (item) => {
                                     <td>
                                         <button
                                             className="btn btn-sm btn-danger"
-                                            onClick={() => handleDelete(item.subcategoryid)}
+                                            onClick={() => handleDelete(item._id)}
                                         >
                                             <FaTrashAlt className="fs-5" />
                                         </button>

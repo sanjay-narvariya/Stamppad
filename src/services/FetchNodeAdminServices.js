@@ -1,6 +1,6 @@
 import axios from 'axios'
   
-  const serverURL='http://localhost:9000'
+  const serverURL='http://localhost:8000'
 
   /*
   const currentDate=()=>{
@@ -30,7 +30,7 @@ const postData=async(url,body)=>{
      }
     
 }
-
+ 
 const getData=async(url)=>{
   try{
   const response= await axios.get(`${serverURL}/${url}`)
